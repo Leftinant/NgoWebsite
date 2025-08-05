@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <div className='py-7 md:px-20 px-10 w-full'>
-      <div className='navbar bg-base-100 shadow-sm rounded-2xl p-4'>
+      <div className='navbar shadow-sm rounded-full p-4 bg-green-100 text-black'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -50,7 +50,9 @@ export default function Navbar() {
           </ul>
         </div>
         <div className='navbar-end'>
-          <a className='btn bg-amber-500 rounded-xl'>Volunteer</a>
+          <a className='btn bg-green-950 rounded-full text-white mr-3'>
+            Volunteer
+          </a>
         </div>
       </div>
     </div>
