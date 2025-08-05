@@ -16,25 +16,31 @@ export default function About() {
       </p>
 
       {/* Tabs */}
-      <div className='flex gap-4 mb-6'>
+      <div className='flex mb-6'>
         <button
           onClick={() => setTab("mission")}
-          className={`btn ${
-            tab === "mission" ? "btn-success" : "btn-outline"
+          className={`p-2 ${
+            tab === "mission"
+              ? "bg-green-300 text-green-950 "
+              : "border-b-2 border-green-300"
           } btn-sm`}>
           Our Mission
         </button>
         <button
           onClick={() => setTab("values")}
-          className={`btn ${
-            tab === "values" ? "btn-success" : "btn-outline"
+          className={`p-2 ${
+            tab === "values"
+              ? "bg-green-300 text-green-950 "
+              : "border-b-2 border-green-300"
           } btn-sm`}>
           Our Values
         </button>
         <button
           onClick={() => setTab("history")}
-          className={`btn ${
-            tab === "history" ? "btn-success" : "btn-outline"
+          className={`p-2 ${
+            tab === "history"
+              ? "bg-green-300 text-green-950 "
+              : "border-b-2 border-green-300"
           } btn-sm`}>
           Our History
         </button>
@@ -42,43 +48,50 @@ export default function About() {
 
       {/* Tab Content */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-start'>
-        {/* Text Content */}
         <div>
           {tab === "mission" && (
             <>
-              <h3 className='text-2xl font-semibold text-green-800 mb-4'>
+              <h3 className='text-2xl font-semibold text-green-200 mb-4'>
                 Our Mission
               </h3>
-              <p className='mb-4 text-gray-700'>
+              <p className='mb-4 text-gray-400'>
                 We aim to bring hope and access to underserved communities by
                 connecting volunteers, educators, and resources.
               </p>
-              <p className='mb-6 text-gray-700'>
+              <p className='mb-6 text-gray-400'>
                 From grassroots education to health programs, we believe in
                 empowering lives through knowledge, care, and opportunity.
               </p>
-              <div className='flex gap-4'>
-                <button className='btn btn-success'>Donate Now</button>
-                <button className='btn btn-outline'>Learn More</button>
-              </div>
             </>
           )}
           {tab === "values" && (
-            <p className='text-gray-700'>
-              We value compassion, equity, and sustainability. Every initiative
-              we lead is rooted in community-driven solutions and long-term
-              impact.
-            </p>
+            <>
+              <h3 className='text-2xl font-semibold text-green-200 mb-4'>
+                Our Values
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                We value compassion, equity, and sustainability. Every
+                initiative we lead is rooted in community-driven solutions and
+                long-term impact.
+              </p>
+            </>
           )}
           {tab === "history" && (
-            <p className='text-gray-700'>
-              Founded in 2020, our NGO has grown from a small local team to a
-              network of changemakers across multiple countries.
-            </p>
+            <>
+              <h3 className='text-2xl font-semibold text-green-200 mb-4'>
+                Our History
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Founded in 2020, our NGO has grown from a small local team to a
+                network of changemakers across multiple countries.
+              </p>
+            </>
           )}
+          <div className='flex gap-4'>
+            <button className='btn btn-success rounded-full'>Donate Now</button>
+          </div>
         </div>
 
-        {/* Images */}
         <div className='relative h-72 w-full'>
           <img
             src='/happyKids.png'

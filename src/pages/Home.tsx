@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import VolunteerModal from "../components/VolunteerModal";
 
 export default function Home() {
   const items = [
@@ -26,9 +27,16 @@ export default function Home() {
           <p className='py-6 md:text-2xl text-green-100'>
             Empowering communities through education, access, and action.
           </p>
-          <button className='py-3 px-5 bg-green-950 mt-10 rounded-full text-white'>
+          <button
+            className='py-3 px-5 bg-green-950 mt-10 rounded-full text-white'
+            onClick={() =>
+              (
+                document.getElementById("volunteer_modal") as HTMLDialogElement
+              ).showModal()
+            }>
             Volunteer
           </button>
+          <VolunteerModal />
         </div>
         <div className='md:w-1/2 flex max-w-screen md:overflow-x-visible overflow-x-scroll'>
           <div className='mx-5 h-full flex items-center md:w-1/2'>

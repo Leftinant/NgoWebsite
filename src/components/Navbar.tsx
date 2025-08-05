@@ -1,3 +1,5 @@
+import VolunteerModal from "./VolunteerModal";
+
 export default function Navbar() {
   return (
     <div className='py-7 md:px-20 px-10 w-full'>
@@ -50,9 +52,16 @@ export default function Navbar() {
           </ul>
         </div>
         <div className='navbar-end'>
-          <a className='btn bg-green-950 rounded-full text-white mr-3'>
+          <a
+            className='btn bg-green-950 rounded-full text-white mr-3'
+            onClick={() =>
+              (
+                document.getElementById("volunteer_modal") as HTMLDialogElement
+              ).showModal()
+            }>
             Volunteer
           </a>
+          <VolunteerModal />
         </div>
       </div>
     </div>
